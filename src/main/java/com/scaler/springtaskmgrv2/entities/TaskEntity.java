@@ -2,6 +2,8 @@ package com.scaler.springtaskmgrv2.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity(name = "tasks")
 @Table(indexes = @Index(columnList = "title"))
 public class TaskEntity extends BaseEntity {
