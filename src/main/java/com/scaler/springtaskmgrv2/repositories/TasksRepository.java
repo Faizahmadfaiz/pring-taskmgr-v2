@@ -14,6 +14,6 @@ public interface TasksRepository extends JpaRepository<TaskEntity, Integer> {
     @Query("SELECT t from tasks t WHERE t.completed = false AND t.dueDate < CURRENT_DATE")
     List<TaskEntity> findAllOverdue();
 
-    List<TaskEntity> findAllByCompletedAndDueDateBefore(Boolean completed, Date dueDate )
+    List<TaskEntity> findAllByCompletedAndDueDateBefore(Boolean completed, Date dueDate);
     List<TaskEntity> findAllByTitleContainingIgnoreCase(String titleFragment);
 }
